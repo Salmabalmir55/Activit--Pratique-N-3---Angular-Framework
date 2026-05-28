@@ -14,16 +14,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'enset-tp3' title`, () => {
+  it(`should have the 'med@gmail.com' email`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('enset-tp3');
+    // On change 'title' par 'Email' et on met la bonne valeur
+    expect(app.Email).toEqual('med@gmail.com');
   });
 
-  it('should render title', () => {
+  it('should render email', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, enset-tp3');
+    // On vérifie si le HTML contient bien l'email (si vous l'avez affiché dans votre HTML)
+    expect(compiled.querySelector('p')?.textContent).toContain('med@gmail.com');
   });
 });
